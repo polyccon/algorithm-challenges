@@ -1,14 +1,17 @@
+// Create a function that looks through an array (first argument)
+//and returns the first element in the array that passes a truth test (second argument).
+
 function findElement(arr, func) {
 
-  var array = arr.filter( function(item) {
-    if (func(item)){
+  var array = arr.filter(function(item) {
+    if (func(item)) {
       return item;
     }
   });
-  if (array.length !== 0){
+  if (array.length !== 0) {
     return array[0];
-  }else{
-  return undefined;
+  } else {
+    return undefined;
   }
 }
 
