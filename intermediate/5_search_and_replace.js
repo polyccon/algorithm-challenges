@@ -6,11 +6,11 @@
 // NOTE: Preserve the case of the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
 
 function myReplace(str, before, after) {
-  if (before[0]===before[0].toUpperCase()){
-    after = after[0].toUpperCase()+after.substr(1, after.length-1);
+  if (before[0] === before[0].toUpperCase()) {
+    after = after[0].toUpperCase() + after.substr(1, after.length - 1);
   }
   var array = str.split(' ');
-  array.splice(array.indexOf(before),1, after);
+  array.splice(array.indexOf(before), 1, after);
   var string = array.join(' ');
   return string;
 }

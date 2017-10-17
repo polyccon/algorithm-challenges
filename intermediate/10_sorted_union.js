@@ -5,13 +5,13 @@
 
 function uniteUnique(arr) {
   var args = [].slice.call(arguments);
-  var array = args.reduce(function(a,b){
+  var array = args.reduce(function(a, b) {
     return a.concat(b);
   });
-  return array.filter(function (value, index, self) {
-                  // remove any duplicates
-     return self.indexOf(value) === index;
-   });
+  return array.filter(function(value, index, self) {
+    // remove any duplicates
+    return self.indexOf(value) === index;
+  });
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]); //should return [1, 3, 2, 5, 4].

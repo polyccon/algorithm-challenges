@@ -5,19 +5,18 @@
 
 function sumAll(arr) {
 
-  var min = Math.min.apply(null,arr);
-  var max = Math.max.apply(null,arr);
-  var array =[min];
+  var min = Math.min.apply(null, arr);
+  var max = Math.max.apply(null, arr);
+  var array = [min];
   var i = min;
-     while (i<max){
-      i+=1;
-       array.push(i);
-    }
+  while (i < max) {
+    i += 1;
+    array.push(i);
+  }
 
-  var sum = array.reduce(function (a, b) {
-  return a + b;
-}, 0);
-
+  var sum = array.reduce(function(a, b) {
+    return a + b;
+  }, 0);
 
   return sum;
 }

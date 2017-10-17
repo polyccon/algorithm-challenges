@@ -6,26 +6,25 @@
 //Input strings are guaranteed to be English words in all lowercase.
 
 function isVowel(char) {
-   return (char === "a" || char === "o" || char === "e" || char === "i" || char === "u");
+  return (char === "a" || char === "o" || char === "e" || char === "i" || char === "u");
 }
-function firstvowelindex (str){
-  for (i=1; i<str.length; i++){
-      if (isVowel(str[i])){
-        return i;
-      }
-  } return 0;
+function firstvowelindex(str) {
+  for (i = 1; i < str.length; i++) {
+    if (isVowel(str[i])) {
+      return i;
+    }
+  }
+  return 0;
 }
 function translatePigLatin(str) {
 
-  if (isVowel(str[0])){
-    return str+'way';
+  if (isVowel(str[0])) {
+    return str + 'way';
+  } else {
+    var i = firstvowelindex(str);
+    return str.substr(i, str.length - 1) + str.substr(0, i) + 'ay';
   }
-  else {
-      var i = firstvowelindex(str);
-        return str.substr(i,str.length-1)+str.substr(0,i)+'ay';
-      }
 }
-
 
 translatePigLatin("california"); //should return "aliforniacay".
 translatePigLatin("paragraphs"); //should return "aragraphspay".
