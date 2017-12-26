@@ -10,7 +10,7 @@ const typetester = array => {
   return !array.some(element => typeof element !== 'number');
 };
 
-const addTogether = args => {
+function addTogether(args) {
   var args = [].slice.call(arguments);
 
   if (!typetester(args)) {
@@ -28,7 +28,7 @@ const addTogether = args => {
       };
     }
   }
-};
+}
 
 // TESTS
 addTogether(2, 3); //Should return 5
