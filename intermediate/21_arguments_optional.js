@@ -6,9 +6,7 @@
 // sumTwoAnd(3) returns 5.
 // If either argument isn't a valid number, return undefined.
 
-const typetester = array => {
-  return !array.some(element => typeof element !== 'number');
-};
+const typetester = array => array.every(element => typeof element === 'number');
 
 function addTogether(args) {
   var args = [].slice.call(arguments);
