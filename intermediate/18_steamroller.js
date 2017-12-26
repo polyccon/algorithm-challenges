@@ -1,9 +1,8 @@
 //STEAMROLLER
 //Flatten a nested array. You must account for varying levels of nesting.
 
-const flattenManyToOne = array => {
-  return array.reduce((acc, cur) => acc.concat(cur), []);
-};
+const flattenManyToOne = array =>
+  array.reduce((acc, cur) => acc.concat(cur), []);
 
 const flattenOneToOne = item => {
   while (Array.isArray(item)) {
