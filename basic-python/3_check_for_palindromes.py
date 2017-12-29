@@ -18,6 +18,15 @@ def palindrome(str):
     return True
   return False
 
+# or
+
+PERMITTED_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+def palindrome(str):
+  str = "".join(c for c in str if c in PERMITTED_CHARS).strip().lower()
+  if str[::-1] == str:
+    return True
+  return False
 
 print (palindrome("eye")) #should return a boolean.
 print (palindrome("eye")) #should return true.
