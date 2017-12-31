@@ -15,6 +15,11 @@ def removedupl(input):
 def mutation(arr):
   arr0 = []
   arr1 = []
+
+  # Could not use the ".split("")" method with an empty separator like in JS,
+  # so I found the following method instead which is a way to add items in a list.
+  # Note: arr += [item] will add "item" as one in list "arr"
+
   arr0 += arr[0].lower()
   arr1 += arr[1].lower()
 
