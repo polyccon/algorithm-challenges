@@ -9,6 +9,11 @@
 def bouncer(arr):
   return list(filter(lambda x: x, arr))
 
+# OR
+
+def bouncer(arr):
+  return [x for x in arr if x]
+  
 #TESTS
 print (bouncer([7, "ate", "", False, 9])) #should return [7, "ate", 9].
 print (bouncer(["a", "b", "c"])) #should return ["a", "b", "c"].
