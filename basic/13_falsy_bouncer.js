@@ -4,8 +4,6 @@
 // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
 
 function bouncer(arr) {
-  var array = [false, null, 0, '', undefined, NaN];
-
   return arr.filter(function(value) {
     return value;
   });

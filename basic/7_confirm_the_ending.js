@@ -4,10 +4,7 @@
 // Do not use the built-in method .endsWith() to solve the challenge.
 
 function confirmEnding(str, target) {
-  if (str.substr(str.length - target.length) === target) {
-    return true;
-  }
-  return false;
+  return str.substr(str.length - target.length) === target;
 }
 
 confirmEnding('Bastian', 'n'); //should return true.
