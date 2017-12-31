@@ -1,5 +1,10 @@
 # Falsy Bouncer
 # Remove all falsy values from an array.
+# Falsy values in Python ar: None, False, 0, 0.0, 0j, [], {}, (), '', set()
+ # and objects for which:
+#    obj.__bool__() returns False
+#    obj.__len__() returns 0
+
 
 def bouncer(arr):
   return list(filter(lambda x: x, arr))
