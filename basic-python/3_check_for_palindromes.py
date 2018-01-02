@@ -14,19 +14,19 @@ import re
 # re is the REGEX object which is imported, method strip removes whitespaces
 def palindrome(str):
   string = re.sub('[^A-Za-z0-9]+', '', str).strip().lower()
-  if string[::-1] == string:
-    return True
-  return False
+  if len(string) <= 2:
+    return None
+  return string[::-1] == string
 
 # or
 
 PERMITTED_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 def palindrome(str):
-  str = "".join(c for c in str if c in PERMITTED_CHARS).strip().lower()
-  if str[::-1] == str:
-    return True
-  return False
+  string = "".join(c for c in str if c in PERMITTED_CHARS).strip().lower()
+  if len(string) <= 2:
+    return None
+  return string[::-1] == string
 
 print (palindrome("eye")) #should return a boolean.
 print (palindrome("eye")) #should return true.
