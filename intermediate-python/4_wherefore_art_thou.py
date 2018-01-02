@@ -20,6 +20,10 @@ def whatIsInAName(arrayOfObj, obj):
         break
   return arr
 
+# OR
+def whatIsInAName(arrayOfObj, obj):
+  return [x for x in arrayOfObj if all(set(obj.keys()).issubset(x) and x[i] == obj[i] for i in obj)]
+
 #TESTS
 print (whatIsInAName(
   [
