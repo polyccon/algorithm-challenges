@@ -15,7 +15,7 @@ import re
 def palindrome(str):
   string = re.sub('[^A-Za-z0-9]+', '', str).strip().lower()
   if len(string) <= 2:
-    return None
+    return True
   return string[::-1] == string
 
 # or
@@ -25,7 +25,7 @@ PERMITTED_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
 def palindrome(str):
   string = "".join(c for c in str if c in PERMITTED_CHARS).strip().lower()
   if len(string) <= 2:
-    return None
+    return True
   return string[::-1] == string
 
 print (palindrome("eye")) #should return a boolean.
