@@ -2,9 +2,8 @@
 # Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 def confirmEnding(str, target):
-  if str[(len(str) - len(target)):]==target:
-    return True
-  return False
+  return str[(len(str) - len(target)):]==target
+
 
 print (confirmEnding("Bastian", "n")) #should return true.
 print (confirmEnding("Connor", "n")) #should return false.
