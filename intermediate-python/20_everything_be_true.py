@@ -1,3 +1,7 @@
+# EVERYTHING BE TRUE
+# Check if the predicate (second argument) is truthy on all elements of a collection
+# (first argument).
+
 def truthCheck(collection, pre):
   # Is everyone being true?
   return all(object.get(pre) for object in collection)
