@@ -4,7 +4,6 @@
 
 function truthCheck(collection, pre) {
   // Is everyone being true?
-
   var trutharray = collection.filter(function(object) {
     if (!object[pre]) {
       return object;
@@ -12,6 +11,13 @@ function truthCheck(collection, pre) {
   });
   return !trutharray.length;
 }
+
+// OR
+
+const truthCheck = (collection, pre) => {
+  // Is everyone being true?
+  return collection.every(object => !!object[pre]);
+};
 
 truthCheck(
   [
