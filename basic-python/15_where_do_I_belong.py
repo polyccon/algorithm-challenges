@@ -3,13 +3,14 @@
 # should be inserted into an array (first argument) once it has been sorted.
 # The returned value should be a number.
 from functools import reduce
-'''
-def countItemsLess(x,y):
-    if y< num:
-        return x+1
-    else:
-        return x
-'''
+
+def getIndexToIns(arr, num):
+  array = arr[:]
+  array.append(num)
+  array.sort()
+  return array.index(num)''
+
+#OR and even better:
 
 def getIndexToIns(arr, num):
     return reduce(lambda x,y: x+1 if y < num else x, arr, 0)
