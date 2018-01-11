@@ -2,12 +2,17 @@
 # Return the lowest index at which a value (second argument)
 # should be inserted into an array (first argument) once it has been sorted.
 # The returned value should be a number.
+from functools import reduce
+'''
+def countItemsLess(x,y):
+    if y< num:
+        return x+1
+    else:
+        return x
+'''
 
 def getIndexToIns(arr, num):
-  array = arr[:]
-  array.append(num)
-  array.sort()
-  return array.index(num)
+    return reduce(lambda x,y: x+1 if y < num else x, arr, 0)
 
 #TESTS
 print (getIndexToIns([10, 20, 30, 40, 50], 35)) #should return 3.
