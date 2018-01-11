@@ -1,3 +1,6 @@
+#STEAMROLLER
+#Flatten a nested array. You must account for varying levels of nesting.
+
 from functools import reduce
 
 def flat(acc, cur):
