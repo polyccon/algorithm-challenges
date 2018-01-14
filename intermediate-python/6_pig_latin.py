@@ -10,6 +10,10 @@ Input strings are guaranteed to be English words in all lowercase.
 def isVowel(char):
    return any ((char == "a", char == "o", char == "e", char == "i", char == "u"))
 
+#OR
+def isVowel(char):
+    return char in "aoeiu"
+
 def firstvowelindex (str):
   for i in range(0, len(str)+1):
     if isVowel(str[i]):
