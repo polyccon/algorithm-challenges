@@ -9,7 +9,7 @@ def updateInventory(arr1, arr2):
     # All inventory must be accounted for or you're fired!
   for array2 in arr2:
     for array1 in arr1:
-      if(array1[1] is array2[1]):
+      if array1[1] is array2[1]:
         array1[0] += array2[0]
     if all(arr1[i][1] is not array2[1] for i in range(len(arr1))):
         arr1.append(array2)
