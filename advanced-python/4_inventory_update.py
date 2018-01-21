@@ -8,7 +8,7 @@ The returned inventory array should be in alphabetical order by item.
 def take_second(elem):
     return elem[1]
 
-def updateInventory(arr1, arr2):
+def update_inventory(arr1, arr2):
     # All inventory must be accounted for or you're fired!
   for array2 in arr2:
     for array1 in arr1:
@@ -19,23 +19,23 @@ def updateInventory(arr1, arr2):
   return sorted(arr1, key=take_second)
 
 
- print (len(updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
+ print (len(update_inventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
  [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"],
  [7, "Toothpaste"]])))
 # should return an array with a length of 6.
 
-print (updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
+print (update_inventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
 [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"],
 [7, "Toothpaste"]]))
 #should return [[88, "Bowling Ball"], [2, "Dirty Sock"], [3, "Hair Pin"], [3, "Half-Eaten Apple"],
 #[5, "Microphone"], [7, "Toothpaste"]]).
-print (updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
+print (update_inventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
 [5, "Microphone"]], []))
 #should return [[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]].
-print (updateInventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"],
+print (update_inventory([], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"],
 [7, "Toothpaste"]]))
 #should return [[67, "Bowling Ball"], [2, "Hair Pin"], [3, "Half-Eaten Apple"], [7, "Toothpaste"]].
-print (updateInventory([[0, "Bowling Ball"], [0, "Dirty Sock"], [0, "Hair Pin"],
+print (update_inventory([[0, "Bowling Ball"], [0, "Dirty Sock"], [0, "Hair Pin"],
 [0, "Microphone"]], [[1, "Hair Pin"], [1, "Half-Eaten Apple"], [1, "Bowling Ball"],
 [1, "Toothpaste"]]))
 #should return [[1, "Bowling Ball"], [0, "Dirty Sock"], [1, "Hair Pin"], [1, "Half-Eaten Apple"],
