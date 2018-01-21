@@ -1,10 +1,11 @@
 # Inventory Update
 '''
-Compare and update the inventory stored in a 2D array against a second 2D array of a fresh delivery.
-Update the current existing inventory item quantities (in arr1). If an item cannot be found, add the
-new item and quantity into the inventory array. The returned inventory array should be in alphabetical order by item.
+Compare and update the inventory stored in a 2D array against a second 2D array of
+a fresh delivery. Update the current existing inventory item quantities (in arr1).
+If an item cannot be found, add the new item and quantity into the inventory array.
+The returned inventory array should be in alphabetical order by item.
 '''
-def takeSecond(elem):
+def take_second(elem):
     return elem[1]
 
 def updateInventory(arr1, arr2):
@@ -15,8 +16,8 @@ def updateInventory(arr1, arr2):
         array1[0] += array2[0]
     if all(arr1[i][1] is not array2[1] for i in range(len(arr1))):
         arr1.append(array2)
-  return sorted(arr1, key=takeSecond)
- 
+  return sorted(arr1, key=take_second)
+
 
  print (len(updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"],
  [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"],
