@@ -13,6 +13,10 @@ function updateInventory(arr1, arr2) {
   return arr1.sort(function(a, b) {
     return a[1] == b[1] ? 0 : a[1] < b[[1]] ? -1 : 1;
   });
+  //OR
+  //   return arr1.sort(function(a, b){
+  //       return a[1].localeCompare(b[1]);
+  // })
 }
 
 //TESTS
